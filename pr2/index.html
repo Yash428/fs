@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function getWeather() {
+            let city = document.getElementById("city").value;
+            let time  = new Date()
+            let month = time.getMonth()+1
+            let date =  time.getFullYear()+ '-'+month+ '-'+time.getDate()
+            fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/${date}?unitGroup=metric&key=BRNNBFNJLBEKKFKCNALN7JHYC&contentType=json`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('Answer').innerHTML = "<div>Current Temperature in "+city+ " is :"+data.days[0].temp+ " C </div>" 
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="heading">
+        Weather App
+    </div>
+    <div class="Input">
+        <input type="text" name="city" id="city" placeholder="Enter City Name">
+        <button type="submit" onclick="getWeather()" id="submit-button">Submit</button>
+    </div>
+    <div class="Answer" id="Answer">
+        
+    </div>
+</body>
+</html>

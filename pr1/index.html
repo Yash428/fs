@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <script>
+        var count = {
+            jcount : 0,
+            pcount : 0,
+            jscount : 0
+        }
+        function addj() {
+            count.jcount = document.getElementById("jcount");
+            count.jcount.innerHTML = parseInt(count.jcount.innerHTML) + 1;
+        }
+        function addp() {
+            count.pcount = document.getElementById("pcount");
+            count.pcount.innerHTML = parseInt(count.pcount.innerHTML) + 1;
+        }
+        function addjs() {
+            count.jscount = document.getElementById("jscount");
+            count.jscount.innerHTML = parseInt(count.jscount.innerHTML) + 1;
+        }
+        setInterval(()=>{
+            var jcount = document.getElementById("jcount");
+            var pcount = document.getElementById("pcount");
+            var jscount = document.getElementById("jscount");
+            jcount.innerHTML = parseInt(jcount.innerHTML) + Math.round(Math.random()*10);
+            pcount.innerHTML = parseInt(pcount.innerHTML) + Math.round(Math.random()*10);
+            jscount.innerHTML = parseInt(jscount.innerHTML) + Math.round(Math.random()*10);
+        },2000)
+
+    </script>
+</head>
+<body>
+    <div class="main-body">
+        <div class="heading">
+            <h2>Vote for your favourite Language</h2>
+        </div>
+        <div class="btns">
+            <button onclick="addj()" class="btn" id="btn3">Java</button>
+            <button onclick="addp()" class="btn" id="btn4">Python</button>
+            <button onclick="addjs()" class="btn" id="btn5">JavaScript</button>
+        </div>
+        <div class="counts">
+            <div class="count">Java: <span id="jcount">0</span></div>
+            <div class="count">Python: <span id="pcount">0</span></div>
+            <div class="count">JavaScript: <span id="jscount">0</span></div>
+        </div>
+    </div>
+</body>
+</html>
