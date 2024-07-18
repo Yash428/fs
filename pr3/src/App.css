@@ -3,6 +3,10 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  height: 100%;
+  color: white;
+  text-shadow: 0 0 4px #00e1ff, 0 0 6px #0000FF;
+  border-radius: 5px;
 }
 
 .logo {
@@ -39,4 +43,10 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.date{
+  margin-top: 1em;
+  font-size: 3em;
+  color: white;
 }

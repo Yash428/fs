@@ -19,7 +19,7 @@ function App() {
     <>
       <h1>Welcome to CHARUSAT!!!!</h1>
       <div className='date'>It is {date}</div>
-      <div className='time'>It is {time}</div>
+      <div className='date'>It is {time}</div>
     </>
   )
 }
