@@ -6,9 +6,9 @@ function App() {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   return (
-    <div className='flex flex-col justify-center items-center h-full w-full font-semibold'>
+    <div className='flex flex-col justify-center items-center h-screen bg-pink-500 w-full font-semibold'>
     <div className='flex flex-col justify-center w-full items-center'>
-      <div className='text-center text-3xl p-3 m-2'>Count: {count} </div>
+      <div className='text-center text-3xl text-white font-bold p-3 m-2'>Count: {count} </div>
       <div className=' flex flex-row w-1/2 items-center justify-center'>
         <button className='p-2 mx-1 my-2 border-2 bg-neutral-200 border-black rounded-xl w-1/4' onClick={() => setCount(0)}>Reset</button>
         <button className='p-2 mx-1 my-2 border-2 bg-neutral-200 border-black rounded-xl w-1/4' onClick={() => setCount(count + 1)}>Increment</button>
